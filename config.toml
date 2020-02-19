@@ -18,7 +18,7 @@ disqusShortname = "https-bladesu-github-io-tech-blog-1"
     author = "Blade Su"
     description = "Reading, learning, and self-Satisfaction"
     keywords = "blog,developer,personal"
-    info = "Data engineer and to-be embedded system engineer."
+    info = "Data engineer and embedded system engineer-to-be."
     avatarurl = "images/avatar.jpg"
     footercontent = "See the trend, stay calm."
 
@@ -29,7 +29,7 @@ disqusShortname = "https-bladesu-github-io-tech-blog-1"
     since = 2020
 
     # Git Commit in Footer, uncomment the line below to enable it.
-    commit = "https://github.com/luizdepra/hugo-coder/tree/"
+    # commit = "https://github.com/luizdepra/hugo-coder/tree/"
 
     rtl = false
 
