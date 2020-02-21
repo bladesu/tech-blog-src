@@ -111,6 +111,11 @@ disqusShortname = "https-bladesu-github-io-tech-blog-1"
             url = "posts/"
 
             [[languages.en.menu.main]]
+            name = "Learning"
+            weight = 2
+            url = "learning/"
+
+            [[languages.en.menu.main]]
             name = "Projects"
             weight = 3
             url = "projects/"
