@@ -9,4 +9,8 @@ GDB is the debugger for C/C++ development. Here I put my notes about this wonder
 
 ## [Installation]({{< ref "learning/debugger/gdb/installation.md" >}})
 
+Show how to install GDB and related tools.
+
 ## [Basic usage]({{< ref "learning/debugger/gdb/basic_usage.md" >}})
+
+Basic usage knowlege for GDB.
