@@ -1,5 +1,5 @@
 ---
-title: "Pointer expression for data with char and string literal in C language."
+title: "Some confusing issue for processing string in C language."
 date: 2020-03-23T23:09:24+08:00
 draft: true
 tags: ["c_language"]
