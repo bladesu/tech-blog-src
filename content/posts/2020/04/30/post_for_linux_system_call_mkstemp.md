@@ -1,8 +1,8 @@
 +++ 
 draft = true
 date = 2020-04-30T17:28:42+08:00
-title = ""
-description = "Linux system calls introduction: mkstemp."
+title = "Linux system calls introduction: mkstemp."
+description = "Introduce the some knowledge about system calls and application implementation on linux platform. Here we start with a convenient system call __mkstemp__."
 slug = "" 
 tags = ["c_language", "linux", "system_call", "mkstemp"]
 categories = []
