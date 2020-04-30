@@ -10,8 +10,6 @@ externalLink = ""
 series = []
 +++
 A new post here:
-[https://bladesu.github.io/learning/lin
-ux_app/fileio/system_call_mkstemp](https://bladesu.github.io/learning/lin
-ux_app/fileio/system_call_mkstemp)
+[https://bladesu.github.io/learning/linux_app/fileio/system_call_mkstemp](https://bladesu.github.io/learning/linux_app/fileio/system_call_mkstemp)
 
 I start to introduce the some knowledge about system calls and application implementation on linux platform. Here we start with a convenient system call __mkstemp__. Any feedbask is welcome, thank you. 
