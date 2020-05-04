@@ -1,8 +1,8 @@
 ---
-title: "System call:mkstemp, why it needs a char array as input."
+title: "Posix API:mkstemp, why it needs a char array as input."
 date: 2020-04-30T16:00:03+08:00
 draft: true
-tags: ["mkstemp", "system_call"]
+tags: ["mkstemp", "posix"]
 ---
 
 Sometimes we need a temporary file to store data in our implementation. For development on linux platform, a convenient choice is writing a file under the folder __/tmp__. After reboot of OS, those files at least is not persist anymore. However, it needs more consideration to such a “temporary” file. For example, considering about uniqueness. It could be a bad idea that a hardcode file name for a program which could have multiple instances.
