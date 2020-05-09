@@ -48,7 +48,7 @@ int setenv1(const char *name, const char *value, int overwrite)
     }
 }
 ```
-However, it could be wrong. You will find the environment would disappear after insertion. After some try and error. I found it will disappear after the inserted name and value string (which is located in __statck memory__ in version 1) was overwritten in __stack__. Here I examine it by write a recursive loop aimed to overwrite certain address. I use it to overwrite the target of address I get from __getenv()__. And the problem is reproducible now.
+However, it could be wrong. You may find the environment would disappear after insertion (not absolutely). After some try and error. I found it will disappear after the inserted name and value string (which is located in __statck memory__ in version 1) was overwritten in __stack__. Here I examine it by write a recursive loop aimed to overwrite certain address. I use it to overwrite the target of address I get from __getenv()__. And the problem is reproducible now.
 
 code: __stry_overwrite()__ link:[https://github.com/bladesu/linux_app_practice/blob/master/process/impl_setenv_unsetenv.c](https://github.com/bladesu/linux_app_practice/blob/master/process/impl_setenv_unsetenv.c)
 ```c
@@ -71,7 +71,7 @@ void try_overwrite(void *p)
 
 And then I make other version to fix the problem by assign a __heap memory__ to put the name=value string. However, it probably induce __memory leak__.
 
-ode: __stry_overwrite()__ link:[https://github.com/bladesu/linux_app_practice/blob/master/process/impl_setenv_unsetenv.c](https://github.com/bladesu/linux_app_practice/blob/master/process/impl_setenv_unsetenv.c)
+ode: __try_overwrite()__ link:[https://github.com/bladesu/linux_app_practice/blob/master/process/impl_setenv_unsetenv.c](https://github.com/bladesu/linux_app_practice/blob/master/process/impl_setenv_unsetenv.c)
 ```c
 int setenv2(const char *name, const char *value, int overwrite)
 {
