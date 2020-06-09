@@ -36,19 +36,19 @@ Of course, I have to make sure it process fine in my development environment.
 I had written a __Dockerfile__ in my [repo](https://github.com/bladesu/cross_compilation_vscode_dev/). If you follow the steps and start docker container in the workspace of orang_pi. You could get a toolchain provided by sunxi. I would not talk about the detail of how to build this docker container. Because you can use a traditional virtual machine to do this. For orange pi, you can get pre-built toolchain is their official github [repo](https://github.com/orangepi-xunlong/toolchain) which is available on ubuntu 14.04.
 
 
-### Compiling Qt
+### 1. Compiling Qt
 There are two important points to remind you:
 
-Change the PATH, make sure you can execute compiler in the executable compiler, assemblers, linker in the toolchain. For example.
+  1. Change the PATH, make sure you can execute compiler in the executable compiler, assemblers, linker in the toolchain. For example:
 
-```
+```shell
 # The toolchain location here: /persistent_data/OrangePiH6_Linux4.9/toolchain/gcc-linaro-4.9-2015.01-x86_64_aarch64-linux-gnu/bin/
-
 export PATH=/persistent_data/OrangePiH6_Linux4.9/toolchain/gcc-linaro-4.9-2015.01-x86_64_aarch64-linux-gnu/bin:$PATH
 ```
-If the toolchain is not set properly, you may found error about CPU register luckily in the compiling time or found built executable program fails to process in target environment.
 
-2. For user want to compile Qt in a mounted storage, you probably would encounter a special error, __file not recognized: File truncated__ for some object file. Just try to use naive storage in the build machine.
+  If the toolchain is not set properly, you may found error about CPU register luckily in the compiling time or found built executable program fails to process in target environment.
+
+  2. For user want to compile Qt in a mounted storage, you probably would encounter a special error, __file not recognized: File truncated__ for some object file. Just try to use naive storage in the build machine.
 
 Now, let’s move on to build Qt, please check every step is processed proper and check every error. The following one is the parameters for this target environment.
 
@@ -59,7 +59,6 @@ Now, let’s move on to build Qt, please check every step is processed proper an
 make
 # 3. Install/link/deploy all component to build machine.
 make install
-
 ```
 Here I install Qt to the machine in the /opt directory. It is the corresponding location on target platform. If no error happens, compress the Qt in /opt and transfer it to the location in target machine.
 
@@ -81,7 +80,7 @@ With built Qt tool, qmake. we can get proper Makefile with leverage to our built
 
 1. set Path to the built qmake.
 ```shell
-2. export PATH=/opt/qt-arm-5.9.9/bin/:$PATH
+export PATH=/opt/qt-arm-5.9.9/bin/:$PATH
 ```
 
 After some try-and-error, I found the target application needs other code in the examples folder in “qt creator”. So just copy all of them to build platform.
@@ -100,7 +99,7 @@ Qt5.9.9
 ├── dist
 └── network.xml
 ```
-3. Do follwoing steps in directory: __Examples/Qt-5.9.9/quick/demos/calqlatr/__ 
+2. Do follwoing steps in directory: __Examples/Qt-5.9.9/quick/demos/calqlatr/__ 
 ```shell
 # make calqlatr.pro
 qmake -project
