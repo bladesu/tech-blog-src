@@ -3,8 +3,8 @@ draft = true
 date = 2020-06-26T15:04:08+08:00
 title = "Deploy yolo v3 to PYNQ-Z2 development board with leverage to calculatipn power CPU"
 description = ""
-slug = "" 
-tags: ["pynq", "open_cv", "yolo"]
+slug = ""
+tags = ["pynq", "open_cv", "yolo"]
 categories = []
 externalLink = ""
 series = []
